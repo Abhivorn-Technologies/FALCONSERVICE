@@ -118,7 +118,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <BookingProvider>
+        <div className="min-h-screen bg-background font-sans text-foreground">
+          <Toaster position="top-center" richColors />
+          <SiteHeader />
+          <Outlet />
+          <SiteFooter />
+          <WhatsAppFloat />
+        </div>
+      </BookingProvider>
     </QueryClientProvider>
   );
 }
