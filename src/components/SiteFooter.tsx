@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const PHONE_DISPLAY = "+91 81797 25035";
@@ -6,12 +6,12 @@ const PHONE_TEL = "+918179725035";
 const ADDRESS = "Ramnagar Signal Center, Karimnagar, Telangana";
 
 const quickLinks = [
-  { label: "Home", to: "/" as const },
-  { label: "Services", to: "/services" as const },
-  { label: "Brands", to: "/brands" as const },
-  { label: "AMC Plans", to: "/amc" as const },
-  { label: "About Us", to: "/about" as const },
-  { label: "Contact Us", to: "/contact" as const },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Brands", href: "/brands" },
+  { label: "AMC Plans", href: "/amc" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const ourServices = [
@@ -49,7 +49,7 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm text-white/70">
             {quickLinks.map((l) => (
               <li key={l.label}>
-                <Link to={l.to} className="hover:text-primary">
+                <Link href={l.href} className="hover:text-primary">
                   {l.label}
                 </Link>
               </li>
@@ -61,7 +61,7 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm text-white/70">
             {ourServices.map((s) => (
               <li key={s}>
-                <Link to="/services" className="hover:text-primary">
+                <Link href="/services" className="hover:text-primary">
                   {s}
                 </Link>
               </li>

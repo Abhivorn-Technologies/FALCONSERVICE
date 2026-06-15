@@ -1,23 +1,26 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
 import { Phone, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useBooking } from "./BookingContext";
+import { usePathname } from "next/navigation";
 
 const PHONE_DISPLAY = "+91 81797 25035";
 const PHONE_TEL = "+918179725035";
 
 const navItems = [
-  { label: "HOME", to: "/" as const },
-  { label: "SERVICES", to: "/services" as const },
-  { label: "BRANDS", to: "/brands" as const },
-  { label: "AMC PLANS", to: "/amc" as const },
-  { label: "ABOUT US", to: "/about" as const },
-  { label: "CONTACT", to: "/contact" as const },
+  { label: "HOME", href: "/" },
+  { label: "SERVICES", href: "/services" },
+  { label: "BRANDS", href: "/brands" },
+  { label: "AMC PLANS", href: "/amc" },
+  { label: "ABOUT US", href: "/about" },
+  { label: "CONTACT", href: "/contact" },
 ];
 
 function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-2.5">
+    <Link href="/" className="flex items-center gap-2.5">
       <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary text-primary-foreground">
         <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
           <path d="M2 12l8-2-3-6 7 7 8-2-5 5 5 8-8-5-5 5 2-8z" />
@@ -35,6 +38,8 @@ function Logo() {
 
 export function SiteHeader() {
   const { open } = useBooking();
+  const pathname = usePathname();
+
   return (
     <>
       <div className="bg-primary text-primary-foreground">
@@ -59,8 +64,8 @@ export function SiteHeader() {
             {navItems.map((n) => (
               <Link
                 key={n.label}
-                to={n.to}
-                activeOptions={{ exact: true }}
+                href={n.href}
+                data-status={pathname === n.href ? "active" : undefined}
                 className="text-foreground transition-colors hover:text-primary data-[status=active]:text-primary"
               >
                 {n.label}
