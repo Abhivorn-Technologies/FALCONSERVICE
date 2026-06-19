@@ -17,7 +17,7 @@ const services = [
     img: fridge,
     title: "Refrigerator Repair",
     desc: "Cooling issues, compressor faults, gas refilling, water leakage, ice maker problems and more — for single door, double door, side-by-side and French door models.",
-    points: ["No cooling", "Gas refilling", "Compressor repair", "Thermostat replacement"],
+    points: ["No cooling", "Gas refilling", "Compressor repair"],
   },
   {
     img: washing,
@@ -29,7 +29,7 @@ const services = [
     img: ac,
     title: "AC Service & Repair",
     desc: "Split & window AC installation, uninstallation, gas charging, deep cleaning, AMC and breakdown repairs by certified technicians.",
-    points: ["Gas charging", "Deep cleaning", "Installation", "PCB & sensor repair"],
+    points: ["Gas charging", "Deep cleaning", "Installation"],
   },
   {
     img: microwave,

@@ -13,6 +13,8 @@ const navItems = [
   { label: "HOME", href: "/" },
   { label: "SERVICES", href: "/services" },
   { label: "BRANDS", href: "/brands" },
+  { label: "ACCESSORIES", href: "/accessories" },
+  { label: "GALLERY", href: "/gallery" },
   { label: "AMC PLANS", href: "/amc" },
   { label: "ABOUT US", href: "/about" },
   { label: "CONTACT", href: "/contact" },
@@ -45,7 +47,7 @@ export function SiteHeader() {
       <div className="bg-primary text-primary-foreground">
         <div className="container mx-auto flex flex-wrap items-center justify-between gap-2 px-4 py-2 text-xs sm:text-sm">
           <span className="font-medium">
-            Welcome to Falcon Services – Authorized Appliance Service Center
+            Welcome to Falcon Services 
           </span>
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5">

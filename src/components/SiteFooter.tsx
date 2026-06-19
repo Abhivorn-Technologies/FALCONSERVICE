@@ -9,6 +9,8 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Brands", href: "/brands" },
+  { label: "Accessories", href: "/accessories" },
+  { label: "Gallery", href: "/gallery" },
   { label: "AMC Plans", href: "/amc" },
   { label: "About Us", href: "/about" },
   { label: "Contact Us", href: "/contact" },
