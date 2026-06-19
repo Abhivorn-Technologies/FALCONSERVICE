@@ -57,7 +57,7 @@ export default function Index() {
             </h1>
             <p className="mt-3 text-lg font-medium text-muted-foreground">Fast. Reliable. Affordable.</p>
             <div className="mt-6">
-              <p className="font-semibold">Authorized Service Center for</p>
+              {/* <p className="font-semibold">Authorized Service Center for</p> */}
               <p className="mt-1 text-lg font-bold text-primary">
                 LG <span className="text-muted-foreground">|</span> Samsung{" "}
                 <span className="text-muted-foreground">|</span> IFB{" "}
